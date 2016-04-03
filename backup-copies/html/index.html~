@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css" />
+<script src="jquery-2.0.0.min.js"> </script>
+<script>
+$(document).ready(function(){
+  $("button").on("click",function(){
+    $.post("http://tvmac:8081/rc/"+$(this).data("op"),function(data,status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button data-op=sys/off >Off</button>
+<button data-op=sys/tv >TV</button>
+<button data-op=sys/mac >Mac</button>
+<button data-op=sys/ps3 >PS3</button>
+<button data-op=sys/atv >AppleTV</button>
+<button data-op=sys/atv-listen >Airplay-listen</button>
+<button data-op=sys/radio >Radio</button>
+<button data-op=rx/vol-up >Vol up</button>
+<button data-op=rx/vol-down >Vol down</button>
+<button data-op=tv/btn-chn-up >TV chn up</button>
+<button data-op=tv/btn-chn-down >TV chn down</button>
+<button data-op=tv/btn-menu-q >TV q menu </button>
+<button data-op=tv/btn-home >TV home</button>
+<button data-op=tv/btn-0 >TV 0</button>
+<button data-op=tv/btn-1 >TV 1</button>
+<button data-op=tv/btn-2 >TV 2</button>
+<button data-op=tv/btn-3 >TV 3</button>
+<button data-op=tv/btn-4 >TV 4</button>
+<button data-op=tv/btn-5 >TV 5</button>
+<button data-op=tv/btn-6 >TV 6</button>
+<button data-op=tv/btn-7 >TV 7</button>
+<button data-op=tv/btn-8 >TV 8</button>
+<button data-op=tv/btn-9 >TV 9</button>
+<button data-op=tv/btn-c-up >TV cur up </button>
+<button data-op=tv/btn-c-down >TV cur down </button>
+<button data-op=tv/btn-c-left >TV cur left </button>
+<button data-op=tv/btn-c-right >TV cur right</button>
+<button data-op=tv/btn-enter >TV enter</button>
+<button data-op=tv/btn-back >TV back</button>
+                   
+
+</body>
+</html>

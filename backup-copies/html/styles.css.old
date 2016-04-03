@@ -1,0 +1,8 @@
+html, body { height: 100%; width: 100%; margin: 0; }
+button {
+	width: 25mm;
+	height: 10mm;
+	margin: 2mm;
+}
+
+.bb { width: 200px; height: 100px }

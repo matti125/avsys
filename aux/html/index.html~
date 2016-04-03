@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css" />
+<script src="jquery-2.0.0.min.js"> </script>
+<script>
+$(document).ready(function(){
+  $("button").on("click",function(){
+    var cmd=$(this).data("op");
+    var xr = new XMLHttpRequest();
+    console.log(cmd);
+//    $(this).css('color','red');
+//    ${ 'background' : '#00ff00' } 
+//    $.post("http://tvmac:8081/rc/"+ cmd, function(data,status){
+//      console.log("Data: " + data + "\nStatus: " + status);
+//    });
+    xr.open('POST',"http://tvmac:8081/rc/"+ cmd, false);
+    xr.send();
+//    $(this).css('color','black');
+//    console.log("done");
+  });
+});
+</script>
+</head>
+<body>
+
+<div>
+<button data-op=sys/off >Off2</button>
+<button data-op=sys/tv >TV</button>
+<button data-op=sys/mac >Mac</button>
+<button data-op=sys/win >Win</button>
+<button data-op=sys/ps3 >PS3</button>
+<button data-op=sys/atv >AppleTV</button>
+<button data-op=sys/atv-listen >Airplay-listen</button>
+<button data-op=sys/radio >Radio</button>
+</div>
+<div>
+<button data-op=rx/vol-up-fast >Vol UP</button>
+<button data-op=rx/vol-up >Vol up</button>
+<button data-op=rx/vol-down >Vol down</button>
+<button data-op=rx/vol-down-fast >Vol DOWN</button>
+</div>
+<div>
+<button data-op=tv/btn-chn-up >TV chn up</button>
+<button data-op=tv/btn-chn-down >TV chn down</button>
+</div>
+<button data-op=tv/btn-menu-q >TV q menu </button>
+<button data-op=tv/btn-home >TV home</button>
+<button data-op=tv/btn-0 >TV 0</button>
+<button data-op=tv/btn-1 >TV 1</button>
+<button data-op=tv/btn-2 >TV 2</button>
+<button data-op=tv/btn-3 >TV 3</button>
+<button data-op=tv/btn-4 >TV 4</button>
+<button data-op=tv/btn-5 >TV 5</button>
+<button data-op=tv/btn-6 >TV 6</button>
+<button data-op=tv/btn-7 >TV 7</button>
+<button data-op=tv/btn-8 >TV 8</button>
+<button data-op=tv/btn-9 >TV 9</button>
+<button data-op=tv/btn-c-up >TV cur up </button>
+<button data-op=tv/btn-c-down >TV cur down </button>
+<button data-op=tv/btn-c-left >TV cur left </button>
+<button data-op=tv/btn-c-right >TV cur right</button>
+<button data-op=tv/btn-enter >TV enter</button>
+<button data-op=tv/btn-back >TV back</button>
+                   
+
+</body>
+</html>
